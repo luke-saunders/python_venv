@@ -3,13 +3,16 @@
 # Luke Saunders 2021
 #---------------------------------------------------------------------------
 
-# Config vars
-. .\venv_config.ps1
+# Read config vars
+. .\venv_create.ps1
 
 Write-Host "Activating the virtual environment ... " -NoNewline
-try {
+try
+{
     & .\$venv_name\Scripts\activate.ps1
     Write-Host "DONE" -ForegroundColor Green
-} catch {
+}
+catch
+{
     Write-Host "FAILED" -ForegroundColor Red
 }
